@@ -24,6 +24,38 @@ flex: 0 0 auto;
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rstudio/leaflet@2.0.3/inst/htmlwidgets/lib/leaflet-binding/leaflet.css" />
+<script src="https://cdn.jsdelivr.net/gh/rstudio/leaflet@2.0.3/inst/htmlwidgets/lib/leaflet-binding/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/rstudio/htmlwidgets@v1.5.4/inst/www/htmlwidgets.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.sync@0.2.4/dist/L.Map.Sync.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet.sync@0.2.4/dist/L.Map.Sync.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@1.3.1/src/easy-button.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@1.3.1/src/easy-button.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.9.0/leaflet-providers.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/rstudio/leaflet.providers@main/inst/htmlwidgets/lib/leaflet-providers-binding/leaflet-providers-binding.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nerik/leaflet-scalemeters@0.0.4/L.Control.Scale.css" />
+<script src="https://cdn.jsdelivr.net/gh/nerik/leaflet-scalemeters@0.0.4/L.Control.Scale.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/r-spatial/mapview@2.0.3/inst/htmlwidgets/lib/mapview/mapview.css" />
+<script src="https://cdn.jsdelivr.net/gh/r-spatial/mapview@2.0.3/inst/htmlwidgets/lib/mapview/mapview.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/r-spatial/leafem@0.1.3/inst/htmlwidgets/lib/plainview/plainview.css" />
+<script src="https://cdn.jsdelivr.net/gh/r-spatial/leafem@0.1.3/inst/htmlwidgets/lib/plainview/plainview.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/r-spatial/leafem@0.1.3/inst/htmlwidgets/lib/leafem/leafem.css" />
+<script src="https://cdn.jsdelivr.net/gh/r-spatial/leafem@0.1.3/inst/htmlwidgets/lib/leafem/leafem.js"></script>
+
+<!-- This style block moves the zoom controls to the bottom left -->
+<style>
+  .leaflet-top.leaflet-left {
+    top: auto;
+    bottom: 10px;
+  }
+</style>
 <script>(function() {
   // If window.HTMLWidgets is already defined, then use it; otherwise create a
   // new object. This allows preceding code to set options that affect the
@@ -390,38 +422,6 @@ flex: 0 0 auto;
   }
 
 })();</script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rstudio/leaflet@2.0.3/inst/htmlwidgets/lib/leaflet-binding/leaflet.css" />
-<script src="https://cdn.jsdelivr.net/gh/rstudio/leaflet@2.0.3/inst/htmlwidgets/lib/leaflet-binding/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/rstudio/htmlwidgets@v1.5.4/inst/www/htmlwidgets.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.sync@0.2.4/dist/L.Map.Sync.css" />
-<script src="https://cdn.jsdelivr.net/npm/leaflet.sync@0.2.4/dist/L.Map.Sync.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@1.3.1/src/easy-button.css" />
-<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@1.3.1/src/easy-button.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.9.0/leaflet-providers.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/rstudio/leaflet.providers@main/inst/htmlwidgets/lib/leaflet-providers-binding/leaflet-providers-binding.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nerik/leaflet-scalemeters@0.0.4/L.Control.Scale.css" />
-<script src="https://cdn.jsdelivr.net/gh/nerik/leaflet-scalemeters@0.0.4/L.Control.Scale.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/r-spatial/mapview@2.0.3/inst/htmlwidgets/lib/mapview/mapview.css" />
-<script src="https://cdn.jsdelivr.net/gh/r-spatial/mapview@2.0.3/inst/htmlwidgets/lib/mapview/mapview.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/r-spatial/leafem@0.1.3/inst/htmlwidgets/lib/plainview/plainview.css" />
-<script src="https://cdn.jsdelivr.net/gh/r-spatial/leafem@0.1.3/inst/htmlwidgets/lib/plainview/plainview.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/r-spatial/leafem@0.1.3/inst/htmlwidgets/lib/leafem/leafem.css" />
-<script src="https://cdn.jsdelivr.net/gh/r-spatial/leafem@0.1.3/inst/htmlwidgets/lib/leafem/leafem.js"></script>
-
-<!-- This style block moves the zoom controls to the bottom left -->
-<style>
-  .leaflet-top.leaflet-left {
-    top: auto;
-    bottom: 10px;
-  }
-</style>
 </head>
 <body style="background-color:white;">
 <div class="html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget_map" style="width:100%;height:480px;"></div>
